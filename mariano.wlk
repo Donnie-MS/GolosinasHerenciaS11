@@ -1,8 +1,20 @@
 import golosinas.*
+/*
+Bañar Golosina
+Hacer que Mariano entienda el mensaje baniar(unaGolosina). 
+El método construye una nueva golosina bañada y la agrega a la colección de las golosinas que compró Mariano.
 
+Pensar, haciendo un diagrama de objetos, qué pasa si:
+
+la golosina ya era parte de la colección.
+se baña una golosina ya bañada.
+*/
 object mariano {
 	const golosinas = []
-	 
+	method baniar(unaGolosina) {
+		var golosinaBaniada = new GolosinaBaniada(golosinaInterior = unaGolosina)
+		golosinas.add(golosinaBaniada)
+	}
 	method comprar(_golosina) { golosinas.add(_golosina) }
 	
 	method desechar (_golosina) { golosinas.remove(_golosina) }
